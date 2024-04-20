@@ -1,0 +1,241 @@
+/*es bloqueante*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    font-size: 16px;
+    /*Defino la fuente general*/
+    font-family: "Ubuntu", sans-serif;
+    --tamanio: 25px;
+    /*definir variables*/
+    --texto-blanco: #ffffff;
+    --color-primario: #9f3647;
+    --fondo-negro: #181419;
+    --gris: #808080;
+}
+* {
+    /* modelo de caja */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /**/
+}
+a {
+  text-decoration: none;
+  color: var(--texto-blanco);
+  cursor: pointer;
+}
+@keyframes logo {
+  0% {
+    transform: translate(0px, -5px) rotate(5deg);
+  }
+  25% {
+    transform: translate(-5px, -8px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-8px, -5px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-5px, 0px) rotate(5deg);
+  }
+  100%{
+    transform: translate(0px, -5px) rotate(5deg);
+  }
+}
+
+body {
+  background-color: var(--fondo-negro);
+  color: var(--texto-blanco);
+
+  header {
+    background-color: var(--color-primario);
+    height: 10vh;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0 2rem;
+      align-items: center;
+
+      logo {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      .logo:hover {
+        /* animation: name duration */
+        animation-name: logo;
+        box-shadow: none;
+        animation-duration: 0.5s;
+        animation-timing-function: ease;
+        animation-delay: inherit;
+        animation-iteration-count: 0.5s;
+      }
+
+      .menu {
+        display: flex;
+        gap: 1rem;
+
+        a {
+          list-style-type: none;
+          padding: 0.5rem 1rem;
+          border-radius: 5px; 
+          transition: box-shadow 0.2s ease; 
+
+        }
+
+        a:hover {
+          background-color: var(--color-primario);
+          background-origin: inherit;
+          /* offset-x | offset-y | blur-radius | color */
+          box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+        }
+      }
+    }
+  }
+
+  #main {
+    .principal {
+      height: 90vh; /*px|vh|vw|%*/
+    width: 100vw;/*relativo al viewport*/
+    background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../assets/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 3rem;/*3 * 16px*/    
+      /*text-align: center;*/
+      padding-top: 5vh;
+    }
+  
+    h2 {
+      font-size: 2rem;
+      padding-top: 5vh;
+      font-weight: 300;
+    }
+  
+    button{
+      width: 10vw;
+      min-width: 20vw;
+      /*TODO:max-width: 25vw; ver que pasa!*/ 
+      height: 10vh;
+      min-height: 50PX;
+      margin-top: 5vh;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: 700;
+      background-color: #9f3647;
+    }
+    }
+    /*estilos formulario de busqueda de peliculas*/
+    .busqueda {
+      background-color: var(--fondo-negro);
+      color: var(--texto-blanco);
+      height: 50vh;
+      padding-top: 15vh;
+      text-align: center;
+
+      h2 {
+        font-size: 2rem;
+      }
+      form {
+        margin-top: 5vh;
+        margin-bottom: 15vh;
+      }
+      form input {
+        border-radius: 20px;
+        padding: 10px 10px;
+        border: none;
+        color: var(--gris);
+        text-transform: capitalize;
+        /*tph: investigar como sacar el border*/
+        width: 50vw;
+      }
+      form button {
+        border-radius: 20px;
+        padding: 10px 10px;    
+        min-width: 10vw;
+        border: 2px solid var(--texto-blanco);
+        background-color: var(--color-primario);
+        color: var(--texto-blanco);
+        margin-left: 1vw;
+      }
+      /*efecto cuando pasamos sobre el boton*/
+      form button:hover {
+        width: 10.5vw;
+      }
+      
+      hr {    
+        width: 70vw;
+        margin: 0 auto;/*una forma de center*/
+        /*text-align: center*/
+        border: 1px solid var(--color-primario)
+      }
+    }
+}
+}
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.textoBlanco {
+    color: var(--texto-blanco);
+}
+.fondoNegro {
+  background-color: var(--fondo-negro);
+}
+
+/* Footer - pie de pagina*/
+footer {
+
+  .circle{
+    display: flex;
+    align-items: flex-end;
+
+    .goBack {
+      /*Abajo a la derecha*/
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+     font-size: 24px;
+     padding: 10px;
+     border-radius: 50%;
+     z-index: 9999; /*por si está en otros elementos, que quede arriba*/
+     color: var(--texto-blanco);
+    }
+
+}
+}
