@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/CSS/registro.css">
+</head>
+<body>
+    <header class="headerRegistrarse">
+            <a class="anclaLogo" href="/index.html">
+            <img src="/assets/icono.png" alt="Logo" class="logo">
+            <span>CAC-MOVIES</span>
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="registro-form">
+            <h2>Registro</h2>
+            <form action="" method="get">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                
+                <input type="email" id="email" placeholder="Email" required>
+                
+                <input type="password" id="password" placeholder="Contraseña" required>
+                
+                <div class="input-container">
+                <input type="date" id="fecha_nacimiento" placeholder="Fecha de Nacimiento" required>
+                </div>
+                <input type="text" id="pais" placeholder="País" required>
+                
+                <input type="checkbox" id="terminos" required>
+                <label for="terminos">Acepto términos y condiciones</label>
+                
+                <button type="submit" formaction="">Registrarse</button>
+            </form>
+            <a class="ayuda" href="#">¿Necesitas ayuda?</a>
+        </div>
+    </div>
+</body>
+</html>
