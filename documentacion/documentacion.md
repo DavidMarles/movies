@@ -1,6 +1,6 @@
 ## link del proyecto:
 
-https://giselemilagros88.github.io/cac_movies_javaphp/ 
+
 
 # DISTRIBUCIÓN DEL PROYECTO.
 
