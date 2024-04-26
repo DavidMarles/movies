@@ -1,11 +1,11 @@
-@import url(../css/menu.css);
-@import url(../css/seccionPrincipal.css);
-@import url(../css/formBuscar.css);
-@import url(../css/lineaInferior.css);
-@import url(../css/tendencias.css);
-@import url(../css/aclamadas.css);
-@import url(../css/footer.css);
-@import url(../css/flecha.css);
+@import url(menu.css);
+@import url(seccionPrincipal.css);
+@import url(formBuscar.css);
+@import url(lineaInferior.css);
+@import url(tendencias.css);
+@import url(aclamadas.css);
+@import url(footer.css);
+@import url(flecha.css);
 
 :root{
     --color__fuente:RGB(253, 250, 251);
