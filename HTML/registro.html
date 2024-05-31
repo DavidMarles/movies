@@ -3,33 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Registro | CAC -MOVIES</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/css/registro.css">
     
 </head>
 <body>
     <header class="cabecera__registro">
-        <h1 class="logo"  onclick="location.href='./index.html'"><img src="../assets/icono.png" alt="Ícono" class="icono__logo">CAC-Movies</h1>
+        <h1 class="logo"  onclick="location.href='/index.html'"><img src="/assets/icono.png" alt="Ícono" class="icono__logo">CAC-Movies</h1>
     </header>
     <main class="container">
         <div class="registration-form">
-
             <h2>Registro</h2>
-            <form action="" method="get">
-                <input type="text" id="nombre" placeholder="Nombre" required>
+            <form action="" method="" id="formuluario__registro">
                 
-                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                <span id="errorNombre" class="error"></span>
                 
-                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="apellido" name="apellido" placeholder="Apellido">
+                <span id="errorApellido" class="error"></span>
                 
-                <input type="password" id="password" placeholder="Contraseña" required>
+                <input type="email" id="email" placeholder="Email">
+                <span id="errorEmail" class="error"></span>
+
+                <input type="password" id="password" name="clave" placeholder="Contraseña">
+                <span id="errorClave" class="error"></span>
+
+                <input type="password" id="password" name="confirmaClave" placeholder="Confirma tu Contraseña">
+                <span id="errorConfirmaClave" class="error"></span>
                 
                 <div class="input-container">
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="Fecha de Nacimiento">
+                    <span id="errorFechaNacimiento" class="error"></span>
 
-                    <input type="date" id="fecha_nacimiento" placeholder="Fecha de Nacimiento" required>
-                    
                     <select name="pais" id="pais">
                         <option class="opcion__pais" id="opcion__pais" value="">País</option>
                         <option class="opcion__pais" id="opcion__pais" value="AR">Argentina</option>
@@ -43,17 +49,20 @@
                         <option class="opcion__pais" id="opcion__pais" value="UY">Uruguay</option>
                         <option class="opcion__pais" id="opcion__pais" value="VE">Venezuela</option>
                     </select>
+                    <span id="errorPais" class="error"></span>
+
                 </div>
                 <div class="terminos__y__condiciones" id="terminos__y__condiciones">
-                    <input type="checkbox" id="terminos" required>
+                    <input type="checkbox" id="terminos" name="terminos">
                     <label id="terminos"  name="terminos"  for="terminos">Acepto términos y condiciones</label>
+                    <span id="errorTerminos" class="error"></span>
                 </div>
                                 
-                <button type="submit" formaction="">Registrarse</button>
+                <input type="submit" formaction="" value="Registrarse">
             </form>
             <a class="ayuda" href="#">¿Necesitas ayuda?</a>
-        
+            
     </main>
-
+    <script src="/JS/validarFormularios.js"></script>
 </body>
 </html>

@@ -58,6 +58,7 @@ main{
                         background: none;
                         border-style: solid;
                         font-size: 1.1rem;
+                        color: RGB(228, 243, 253);
                         
                     }
 
@@ -101,7 +102,7 @@ main{
 
                     }
 
-                    button{
+                    input[type="submit"]{
                         width: 70%;
                         height: 2.5rem;
                         border-radius: 0.5rem;
@@ -121,17 +122,36 @@ main{
         }
     }
 
+    /* medidas para tablet */
+    @media(min-width:702px ) and (max-width:1024px){
+        header{
+            
+          h1{
+            min-width: 15vw;
+          }  
+        }
+
+        main{
+            .registration-form{
+                min-width: 60%;
+                h2{
+                    position: static;
+                }
+            }
+        }
+    }
    
 /* medidas para desktop */
 
-@media (min-width:1024px){
+@media (min-width:1025px) and (max-width:1280px){
     main{
         margin-bottom: 3rem;
+        
                     
         div h2{
             position: absolute;
             left: 38%;
-            top: 23.5%;
+            top: 24%;
             font-size: 3rem;
             text-shadow: 2px -3px 5px #2a2a2a;
         }    
@@ -145,15 +165,13 @@ main{
             margin-top: -20%;
         }
 
-        select{
-            margin-bottom: -20%;
-        }
-
+     
         button{
-            position: absolute;
-            margin-top: 1rem;
-            top: 115%;
+            margin-top: -2rem;
             max-width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
     }
@@ -163,16 +181,51 @@ main{
         
     }
 
-    .ayuda{
-        position: absolute;
-        top: 126%;
-        left: 38%;
-    }
-
+   
     
 }
 
+@media (min-width:1281px){
+    main{
+        margin-bottom: 3rem;
+       
+                    
+        div h2{
+            position: absolute;
+            left: 38%;
+            top: 19%;
+            font-size: 3rem;
+            text-shadow: 2px -3px 5px #2a2a2a;
+        }    
+    }
 
+    div{
+        padding-top: 5rem;
+        padding-bottom: 1.1rem;
+        max-width: 30vw;
+        form input[type="date"]{
+            margin-top: -17%;
+        }
+
+     
+        button{
+            margin-top: -2rem;
+            max-width: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+
+    #terminos__y__condiciones{
+        padding-top: 0%;
+        
+    }
+
+   
+    
+}
 
 
 
